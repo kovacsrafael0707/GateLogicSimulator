@@ -27,18 +27,6 @@ public class LogicGateTests
     }
 
     [Test]
-    public void NOT_True_ReturnsFalse()
-    {
-        Assert.IsFalse(LogicGate.Evaluate(GateType.NOT, true));
-    }
-
-    [Test]
-    public void NOT_False_ReturnsTrue()
-    {
-        Assert.IsTrue(LogicGate.Evaluate(GateType.NOT, false));
-    }
-
-    [Test]
     public void NAND_TrueTrue_ReturnsFalse()
     {
         Assert.IsFalse(LogicGate.Evaluate(GateType.NAND, true, true));

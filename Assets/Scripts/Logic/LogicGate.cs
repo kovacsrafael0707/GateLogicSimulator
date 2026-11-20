@@ -18,15 +18,4 @@ public class LogicGate
                 throw new System.ArgumentException($"Invalid gate type {gateType}");
         }
     }
-
-    public static bool Evaluate(GateType gateType, bool value)
-    {
-        switch (gateType)
-        {
-            case GateType.NOT:
-                return !value;
-            default:
-                throw new System.ArgumentException($"Invalid gate type {gateType}");
-        }
-    }
 }
