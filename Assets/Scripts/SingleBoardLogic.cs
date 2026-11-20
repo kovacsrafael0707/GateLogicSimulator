@@ -20,5 +20,11 @@ public class SingleBoardLogic : MonoBehaviour
     private void OnBoardSpawned(GameObject board)
     {
         spawnTrigger.enabled = false;
+
+        if (Mathf.Abs(Vector3.Dot(board.transform.up, Vector3.up)) < 0.9f)
+        {
+            Vector3 wallFix = Vector3.ProjectOnPlane(Vector3.up, board.transform.up).normalized;
+            board.transform.rotation = Quaternion.LookRotation(wallFix, board.transform.up);
+        }
     }
 }
